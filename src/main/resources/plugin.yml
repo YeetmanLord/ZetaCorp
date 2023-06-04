@@ -22,12 +22,10 @@ permissions:
         default: op
 
 commands:
-  zeta_corporation:
+  corporation:
     aliases:
       - corps
-      - corporation
       - company
-      - zeta_corps
 
     description: Allows players to configure their companies.
     usage: /<command>
