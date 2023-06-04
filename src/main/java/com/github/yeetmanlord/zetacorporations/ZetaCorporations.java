@@ -123,6 +123,7 @@ public final class ZetaCorporations extends ZetaPlugin {
         });
 
         getCommand("trading_guide").setExecutor(new TradingGuide(this));
+
         getCommand("zeta_corporations").setExecutor((sender, command, label, args) -> {
             if (sender instanceof Player p) {
                 new ConfigMenu(ZetaCore.getInstance().getPlayerMenuUtility(p)).open();
