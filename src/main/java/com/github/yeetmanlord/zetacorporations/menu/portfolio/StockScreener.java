@@ -197,7 +197,7 @@ public class StockScreener extends AbstractPaginatedMenu<Company> implements ICh
                         "&7Current: &e" + ZetaCorporations.INT_FORMAT.format(quantity)), this), "Quantity", 2, "&6", "&6&l"));
             } else {
                 this.animatedItems.add(BuiltinAnimation.scrollingFormatItem(new AnimatedItem(20, this.makeItem(Material.GOLD_INGOT, "&6Order Type",
-                        "", "Market", "&e&lLimit", "&7Click to change to a limit order."), this), "&6Order Type", 2, "&6", "&6&l"));
+                        "", "&8Market", "&e&lLimit", "&7Click to change to a limit order."), this), "Order Type", 2, "&6", "&6&l"));
                 this.animatedItems.add(BuiltinAnimation.scrollingFormatItem(new AnimatedItem(22, this.makeItem(Material.HOPPER, "&6Quantity",
                         "&7Click to change the quantity of shares you want to buy.", "&7Current: &e" + ZetaCorporations.INT_FORMAT.format(quantity)),
                         this), "Quantity", 2, "&6", "&6&l"));
@@ -234,7 +234,7 @@ public class StockScreener extends AbstractPaginatedMenu<Company> implements ICh
                     this.price = 0;
                 }
                 case 53 -> {
-                    if (price == 0 && orderType == OrderPriceConfiguration.OrderType.LIMIT) {
+                    if (price <= 0 && orderType == OrderPriceConfiguration.OrderType.LIMIT) {
                         menuUtil.getOwner().sendMessage(ChatColor.RED + "You must set a price for a limit order.");
                         break;
                     }

@@ -92,7 +92,13 @@ public class CompanyMenu extends AbstractGUIMenu implements IChatInputable, IAni
         switch (e.getSlot()) {
             case 12 -> this.setInput(InputType.STRING1, "&aEnter the new name of your company.");
             case 14 -> this.setInput(InputType.STRING2, "&aEnter the new description of your company.");
-            case 30 -> this.setInput(InputType.NUMBER, "&aEnter the amount of shares you want to issue.");
+            case 30 -> {
+                if (company.getSharesIssued() > ZetaCorporations.getInstance().getGeneralConfig().getMaxSharesIssued()) {
+                    this.menuUtil.getOwner().sendMessage(ChatColor.RED + "You have already issued the maximum amount of shares.");
+                    return;
+                }
+                this.setInput(InputType.NUMBER, "&aEnter the amount of shares you want to issue.");
+            }
             case 32 -> new CorporateAccount(this.menuUtil, this).open();
             case 49 -> this.close();
         }

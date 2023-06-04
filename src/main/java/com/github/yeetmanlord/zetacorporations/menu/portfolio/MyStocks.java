@@ -128,7 +128,7 @@ public class MyStocks extends AbstractPaginatedMenu<Share> {
                     this.price = 0;
                 }
                 case 53 -> {
-                    if (price == 0 && orderType == OrderPriceConfiguration.OrderType.LIMIT) {
+                    if (price <= 0 && orderType == OrderPriceConfiguration.OrderType.LIMIT) {
                         menuUtil.getOwner().sendMessage(ChatColor.RED + "You must set a price for a limit order.");
                         break;
                     }
