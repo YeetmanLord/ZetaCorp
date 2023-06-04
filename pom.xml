@@ -6,7 +6,7 @@
 
     <groupId>com.github.yeetmanlord</groupId>
     <artifactId>zetacorporations</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>ZetaCorporations</name>
@@ -20,7 +20,6 @@
     </properties>
 
     <build>
-        <finalName>ZetaCorporations</finalName>
         <outputDirectory>${project.basedir}/target</outputDirectory>
         <plugins>
             <plugin>

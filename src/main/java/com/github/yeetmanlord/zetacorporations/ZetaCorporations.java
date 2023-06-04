@@ -108,7 +108,7 @@ public final class ZetaCorporations extends ZetaPlugin {
             company.updateSharesOutstanding();
         }
 
-        getCommand("zeta_corporation").setExecutor((sender, command, label, args) ->  {
+        getCommand("corporation").setExecutor((sender, command, label, args) ->  {
             if (sender instanceof Player p) {
                 new CompanyConfigMenu(ZetaCore.getInstance().getPlayerMenuUtility(p)).open();
             }
@@ -122,8 +122,8 @@ public final class ZetaCorporations extends ZetaPlugin {
             return true;
         });
 
-        getCommand("trading_help").setExecutor(new TradingGuide(this));
-        getCommand("zeta_corp_config").setExecutor((sender, command, label, args) -> {
+        getCommand("trading_guide").setExecutor(new TradingGuide(this));
+        getCommand("zeta_corporations").setExecutor((sender, command, label, args) -> {
             if (sender instanceof Player p) {
                 new ConfigMenu(ZetaCore.getInstance().getPlayerMenuUtility(p)).open();
             }

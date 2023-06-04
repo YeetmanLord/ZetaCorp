@@ -161,7 +161,7 @@ You can specify a quantity and price. The price is per share. The quantity is th
 - `corporations`, `corps`, or `company` - Allows players to configure their companies
 - `portfolio`, `stocks`, or `my_portfolio` - Allows players to view their portfolio and place orders
 - `trading_guide`, `guide`, or `investing_guide` - Allows players to get some helpful information when it comes to this plugin.
-- `zeta_corp_config` - Allows admins to configure the plugin
+- `zeta_corporations` or `zetacorp` - Allows admins to configure the plugin
 
 
 ## Config

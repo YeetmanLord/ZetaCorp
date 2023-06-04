@@ -26,6 +26,7 @@ commands:
     aliases:
       - corps
       - company
+      - corporations
 
     description: Allows players to configure their companies.
     usage: /<command>
@@ -52,7 +53,9 @@ commands:
     permission: zeta_corp.trading_guide
     permission-message: §cYou do not have permission to use this command.
 
-  zeta_corp_config:
+  zeta_corporations:
+    aliases:
+      - zetacorp
     description: Allows admins to configure the plugin.
     usage: /<command>
     permission: zeta_corp.admin
