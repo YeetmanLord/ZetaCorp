@@ -1,0 +1,61 @@
+name: ZetaCorporations
+version: '${project.version}'
+main: com.github.yeetmanlord.zetacorporations.ZetaCorporations
+api-version: 1.19
+prefix: 'ZetaCorp'
+depend: [ ZetaCore, Vault ]
+authors: [ YeetManLord ]
+description: A Minecraft plugin that allows players to register companies and allows players to invest in those companies.
+
+permissions:
+    zeta_corp.corporation:
+        description: Allows players to configure their companies.
+        default: true
+    zeta_corp.portfolio:
+        description: Allows players to view their portfolio.
+        default: true
+    zeta_corp.trading_guide:
+        description: Allows players to view the trading guide.
+        default: true
+    zeta_corp.admin:
+        description: Allows admins to configure the plugin.
+        default: op
+
+commands:
+  zeta_corporation:
+    aliases:
+      - corps
+      - corporation
+      - company
+      - zeta_corps
+
+    description: Allows players to configure their companies.
+    usage: /<command>
+    permission: zeta_corp.corporation
+    permission-message: §cYou do not have permission to use this command.
+
+  portfolio:
+    aliases:
+      - stocks
+      - my_portfolio
+
+    description: Allows players to view their portfolio.
+    usage: /<command>
+    permission: zeta_corp.portfolio
+    permission-message: §cYou do not have permission to use this command.
+
+  trading_guide:
+    aliases:
+      - guide
+      - investing_guide
+
+    description: Allows players to view the trading guide.
+    usage: /<command> help | trading | companies | definitions | tips | legal_disclaimer
+    permission: zeta_corp.trading_guide
+    permission-message: §cYou do not have permission to use this command.
+
+  zeta_corp_config:
+    description: Allows admins to configure the plugin.
+    usage: /<command>
+    permission: zeta_corp.admin
+    permission-message: §cYou do not have permission to use this command.
