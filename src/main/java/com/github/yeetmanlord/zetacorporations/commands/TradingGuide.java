@@ -42,9 +42,9 @@ public class TradingGuide extends Command {
         public void run(CommandSender sender, String[] args) {
             String[] content = new String[] {
                     "&e" + "-".repeat(width + 4),
-                    "&e" + "| " + TradingGuide.centerTitle("Trading Guide", "&6&l", width) + "&e" + " |",
-                    "&e" + "| " +TradingGuide.centerTitle("Trading and Order Types", "&e", width) + "&e" + " |",
-                    "&e" + "-".repeat(width + 4),
+                    "&6&lTrading Guide",
+                    "&e&lTrading and Order Types",
+                    "",
                     "&e&lPlacing Orders:",
                     "&fPlacing orders is quite simple, first open your        ",
                     "&aportfolio&f and open the search companies screen. Then,",
@@ -110,15 +110,15 @@ public class TradingGuide extends Command {
         public void run(CommandSender sender, String[] args) {
             String[] content = new String[] {
                     "&e" + "-".repeat(width + 4),
-                    "&e" + "| " + TradingGuide.centerTitle("Trading Guide", "&6&l", width) + "&e" + " |",
-                    "&e" + "| " + TradingGuide.centerTitle("Companies Guide", "&e", width) + "&e" + " |",
-                    "&e" + "-".repeat(width + 4),
+                    "&6&lTrading Guide",
+                    "&e&lCompanies Guide",
+                    "",
                     "&e&lCreating A Company:",
                     "&fTo create a company, first open the companies GUI",
                     "&e(/companies)&fThen click on create company.",
                     "&fFirst input the company's name and then its ticker",
                     "&fA ticker is the name investors use to refer to a",
-                    "&7company. It must be 5 or less characters and only",
+                    "&fcompany. It must be 5 or less characters and only",
                     "&fnumbers and letters. It should be recognizable.",
                     "&fFor example, TSLA is Tesla and AAPL is Apple.",
                     "&e&lManaging your company:",
@@ -191,9 +191,9 @@ public class TradingGuide extends Command {
         public void run(CommandSender sender, String[] args) {
             String[] content = new String[] {
                     "&e" + "-".repeat(width + 4),
-                    "&e" + "| " + TradingGuide.centerTitle("Trading Guide", "&6&l", width) + "&e" + " |",
-                    "&e" + "| " + TradingGuide.centerTitle("Definitions", "&9", width) + "&e" + " |",
-                    "&e" + "-".repeat(width + 4),
+                    "&6&lTrading Guide",
+                    "&e&lDefinitions",
+                    "",
                     "&e&lStock: &fA stock/share is a part of a company.",
                     "&e&lShareholder: &fA shareholder is someone who shares in a company",
                     "&e&lDividend: &fA dividend is a payout to shareholders",
@@ -255,9 +255,9 @@ public class TradingGuide extends Command {
         public void run(CommandSender sender, String[] args) {
             String[] content = new String[] {
                     "&e" + "-".repeat(width + 4),
-                    "&e" + "| " + TradingGuide.centerTitle("Trading Guide", "&6&l", width) + "&e" + " |",
-                    "&e" + "| " + TradingGuide.centerTitle("Trading Tips", "&2", width) + "&e" + " |",
-                    "&e" + "-".repeat(width + 4),
+                    "&6&lTrading Guide",
+                    "&e&lTrading Tips",
+                    "",
                     "&fIn general, you should look for companies who's market cap and balance",
                     "&fare similar because this indicates that the company could pay out shareholders",
                     "&fif deleted. Just a safety tip and a way to avoid scams.",
@@ -307,9 +307,9 @@ public class TradingGuide extends Command {
         public void run(CommandSender sender, String[] args) {
             String[] content = new String[]{
                     "&e" + "-".repeat(width + 4),
-                    "&e" + "| " + centerTitle("Trading Guide", "&6&l", width) + "&e" + " |",
-                    "&e" + "| " + centerTitle("Legal Disclaimer", "&c", width) + "&e" + " |",
-                    "&e" + "-".repeat(width + 4),
+                    "&6&lTrading Guide",
+                    "&c&lLegal Disclaimer",
+                    "",
                     "&fThis plugin is a game and is not meant to be used as a real world stock market.",
                     "&fI am not a financial advisor and anything you see in this plugin should not be",
                     "&ftaken as financial advice.",
@@ -319,6 +319,7 @@ public class TradingGuide extends Command {
                     "&fI'm a developer not a financial advisor after all!",
                     "&e" + "-".repeat(width + 4),
             };
+            sendMessage(content, sender);
         }
     }
 
@@ -347,18 +348,6 @@ public class TradingGuide extends Command {
         return "/trading_guide help | trading | companies | definitions | tips | legal_disclaimer";
     }
 
-
-    /**
-     * Pads the title string with spaces to center it with the specified character width.
-     * @param title Text to center
-     * @param format Formatting string to add formats to text
-     * @param width Character Width
-     * @return Centered string with formatting. Padded with whitespace to be the specified width
-     */
-    private static String centerTitle(String title, String format, int width) {
-        int padding = (width - title.length()) / 2;
-        return " ".repeat(padding) + format + title + " ".repeat(padding);
-    }
 
     private static void sendMessage(String[] content, CommandSender sender) {
         for (String line : content) {
